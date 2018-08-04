@@ -3,7 +3,7 @@ package ca.grasset.bibliotheque.livre;
 public class Auteur {
 	
 	String nom;
-	String Prenom;
+	String prenom;
 	int id;
 	
 	public int getId() {
@@ -21,7 +21,14 @@ public class Auteur {
 	public Auteur(String nom, String prenom) {
 		super();
 		this.nom = nom;
-		Prenom = prenom;
+		this.prenom = prenom;
+	}
+	
+	public Auteur(String nom, String prenom, int id) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.id = id;
 	}
 
 	public String getNom() {
@@ -33,15 +40,19 @@ public class Auteur {
 	}
 
 	public String getPrenom() {
-		return Prenom;
+		return prenom;
 	}
 
 	public void setPrenom(String prenom) {
-		Prenom = prenom;
+		this.prenom = prenom;
 	}
 	
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getPrenom() + " " + getNom();
+	}
 	
 
 }
