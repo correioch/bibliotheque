@@ -8,14 +8,15 @@ public class Livre {
 	String situation;	
 	String typeLivre;
 	String status;
-	Date dateAcquisition;
+	
+	String dateAcquisition;
 	int id;
 	
 	public Livre() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Livre(ISBN isbn, String situation, String typeLivre, String status, Date dateAcquisition, int id) {
+	public Livre(ISBN isbn, String situation, String typeLivre, String status, String dateAcquisition, int id) {
 		super();
 		this.isbn = isbn;
 		this.situation = situation;
@@ -48,11 +49,11 @@ public class Livre {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Date getDateAcquisition() {
+	public String getDateAcquisition() {
 		return dateAcquisition;
 	}
-	public void setDateAcquisition(Date dateAcquisition) {
-		this.dateAcquisition = dateAcquisition;
+	public void setDateAcquisition(String date) {
+		this.dateAcquisition = date;
 	}
 	public int getId() {
 		return id;
